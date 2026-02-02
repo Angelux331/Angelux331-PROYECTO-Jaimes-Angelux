@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>KARIO Media - Acceso (Mock)</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="bg-photo">
+  <!--
+    Este contenedor .stage aloja "pantallas" apiladas una encima de otra.
+    Usamos :target para decidir cuál se ve.
+  -->
+  <main class="stage">
+
+    <!-- Pantalla 1: Login (similar a imagen 1) -->
+    <section id="login" class="screen screen--login" aria-label="Pantalla de login">
+      <article class="card">
+        <header class="brand">
+          <img src="./assets/kario sin kairo.svg" alt="img" id="imagenlogo">
+          <div class="brand__name">MEDIA</div>
+        </header>
+
+        <h1 class="title">Bienvenido al panel digital de<br><span class="title__accent">KARIO Media</span></h1>
+        <p class="subtitle">
+          Por favor ingresa los siguientes datos para ingresar a la plataforma
+        </p>
+
+        <form class="form" action="#" autocomplete="off">
+          <label class="field">
+            <span class="field__label">Usuario</span>
+            <input class="field__input" type="text" placeholder="" />
+          </label>
+
+          <label class="field">
+            <span class="field__label">Contraseña</span>
+            <input class="field__input" type="password" placeholder="" />
+          </label>
+
+          <!--
+            Sin JS: el "ingresar" es un enlace que activa #step2 (pantalla 2)
+            Los inputs NO se validan ni se envían.
+          -->
+          <a class="btn btn--primary" href="#step2">Ingresar al panel</a>
+
+          <p class="help">
+            ¿Tienes problemas para ingresar? Por favor contactarse con asistencia técnica lo más pronto posible
+          </p>
+        </form>
+      </article>
+    </section>
+
+    <!-- Pantalla 2: Bienvenido de nuevo (similar a imagen 2) -->
+    <section id="step2" class="screen screen--welcome" aria-label="Pantalla de bienvenida">
+      <article class="card card--wide">
+        <header class="brand">
+          <img src="./assets/kario sin kairo.svg" alt="img" id="imagenlogo">
+          <div class="brand__name">MEDIA</div>
+        </header>
+
+        <h2 class="title">Bienvenido de nuevo</h2>
+
+        <div class="user">
+          <img src="./assets/pp.png" alt="">
+          <div class="user__name">Pedro Felipe Gómez Bonilla</div>
+          <div class="user__role">Usuario Administrador</div>
+        </div>
+
+        <!-- En el ejemplo real podrías redirigir con JS; aquí solo link a panel.html -->
+        <a class="btn btn--primary btn--center" href="panel.html">Continuar</a>
+      </article>
+    </section>
+
+  </main>
+</body>
+</html>
