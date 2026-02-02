@@ -30,6 +30,40 @@ body{
 }
 
 /* =========================================================
+   ICONOS + TEXTO en los <a> del header
+   - tool--with-icon convierte el link en un flex container
+   - gap separa icono y texto sin margenes manuales
+========================================================= */
+.tool--with-icon{
+  display: inline-flex;     /* pone icono y texto en una sola fila */
+  align-items: center;      /* centra verticalmente icono y texto */
+  gap: 10px;                /* espacio entre icono y texto */
+}
+
+/* Tamaño consistente de los iconos dentro de los links */
+.tool__icon{
+  width: 18px;
+  height: 18px;
+  display: block;           /* quita “espacios” raros de img inline */
+  flex: 0 0 auto;           /* evita que se estire/encoja */
+}
+
+/* Iconos del lado derecho: mismo tamaño que los del menú */
+.topbar__right img{
+  width: 18px;
+  height: 18px;
+  display: block;
+}
+
+/* El último (avatar) lo hacemos circular y más grande */
+.topbar__right img:last-child{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;        /* recorta bien si la foto no es cuadrada */
+}
+
+/* =========================================================
    FONDO con foto + overlay (para el login/bienvenida)
    - bg-photo simula la imagen del estadio con oscurecimiento.
 ========================================================= */
