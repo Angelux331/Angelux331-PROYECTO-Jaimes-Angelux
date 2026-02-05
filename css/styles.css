@@ -151,9 +151,6 @@ body{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;margin:0;padding:0;
 .orange{background:conic-gradient(#FFA500 var(--p), #eee 0);color:#FFA500}
 
 .app-shell{padding-top:10px}
-.page{display:none}
-#inicio{display:block}
-.page:target{display:block}
 
 .page-head{
   display: flex;
@@ -164,7 +161,10 @@ body{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;margin:0;padding:0;
   max-width:1400px;
 }
 
-.mainnormal, .añadir {
+.mainnormal,
+.añadir,
+.eliminar,
+.reportar {
   display: none;
 }
 
@@ -215,18 +215,15 @@ input[type="radio"] {
   transition: background 0.2s ease;
 }
 
-#v1:checked ~ .mainnormal{
+#v1:checked ~ .mainnormal {
   display: block;
 }
-
 #añador:checked ~ .añadir {
   display: block;
 }
-
 #eliminar:checked ~ .eliminar {
   display: block;
 }
-
 #reportar:checked ~ .reportar {
   display: block;
 }
