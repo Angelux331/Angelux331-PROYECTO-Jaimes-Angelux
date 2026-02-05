@@ -7,67 +7,71 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 
-<body class="dashboard-body">
-  <header>
-    <nav class="top-nav" aria-label="Navegación principal">
-      <div class="nav-group" aria-label="Acciones">
-        <a href="/pages/add.html" class="nav-item">
-          <img src="/assets/Group 3.svg" class="nav-icon" alt="" aria-hidden="true">
-          <span>Añadir</span>
-        </a>
+<body class="dashboard-body contenidos">
+  
+  <input type="radio" name="vista" id="v1" checked>
+  <input type="radio" name="vista" id="añador" hidden>
+  <input type="radio" name="vista" id="eliminar" hidden>
+  <input type="radio" name="vista" id="reportar" hidden>
 
-        <a href="#refrescar" class="nav-item">
+  <header>
+
+    <nav class="top-nav botones" aria-label="Navegación principal">
+
+      <div class="nav-group" aria-label="Acciones">
+
+        <label for="añador" class="nav-item" style="cursor:pointer">
+          <img src="/assets/Group 3.svg" class="nav-icon" alt="" aria-hidden="true">
+            <span>Añadir</span>
+        </label>
+
+        <a href="#refrescar" class="nav-item btnnav" style="cursor:pointer">
           <img src="assets/Icon open-reload.svg" class="nav-icon" alt="" aria-hidden="true">
           <span>Refrescar</span>
         </a>
 
-        <a href="/pages/delete.html" class="nav-item">
-          <img src="assets/Icon material-delete-forever.svg" class="nav-icon" alt="" aria-hidden="true">
+        <label for="eliminar" class="nav-item" style="cursor:pointer">
+          <img src="assets/Icon material-delete-forever.svg" class="nav-icon" alt="">
           <span>Eliminar</span>
-        </a>
+        </label>
       </div>
 
       <div class="logo-center" aria-label="Inicio">
-        <a href="#inicio" class="nav-item" style="gap:0;" aria-label="Ir al inicio">
-          <img src="assets/kario sin kairo.svg" alt="Kario" height="40">
-        </a>
+        <label for="v1" class="nav-item" style="cursor:pointer" style="gap:0;">
+          <img src="assets/kario sin kairo.svg" class="nav-icon" alt="">
+        </label>
       </div>
 
       <div class="nav-group" aria-label="Soporte y cuenta">
-        <a href="/pages/report.html" class="nav-item">
-          <img src="assets/Icon material-bug-report.svg" class="nav-icon" alt="" aria-hidden="true">
+        <label for="reportar" class="nav-item" style="cursor:pointer">
+          <img src="assets/Icon material-bug-report.svg" class="nav-icon" alt="">
           <span>Reportar</span>
-        </a>
+        </label>
 
-        <a href="/pages/fqa.html" class="nav-item">
+        <a href="/pages/fqa.html" class="nav-item btnnav">
           <span class="nav-help-badge" aria-hidden="true">?</span>
           <span>Ayuda</span>
         </a>
 
         <div class="nav-right" aria-label="Notificaciones y perfil">
-          <a class="nav-item" href="#inicio" aria-label="Ver notificaciones (maqueta)">
+          <a class="nav-item btnnav1" href="#inicio" aria-label="Ver notificaciones (maqueta)">
             <img src="assets/Icon material-notifications-active.svg" class="nav-icon" alt="" aria-hidden="true">
           </a>
 
-          <a href="/pages/config.html" class="nav-item" aria-label="Configuración">
+          <a href="/pages/config.html" class="nav-item btnnav1" aria-label="Configuración">
             <img src="assets/Icon ionic-ios-settings.svg" class="nav-icon" alt="" aria-hidden="true">
           </a>
           <div>
             <a href="pages/profile.html" class="avatar-small">
               <img src="assets/pp.png" class="avatar-small" alt="Foto de perfil" >
             </a>
-            <div class="profile-page">
-              <h3>profile</h3>
-              <a href="">Profile Settings</a>
-              <a href="">Cerrar Sesion</a>
-            </div>
           </div>
         </div>
       </div>
     </nav>
   </header>
 
-  <main id="contenido" class="main-container app-shell" tabindex="-1">
+  <main class="main-container app-shell mainnormal" tabindex="-1">
     <!-- INICIO -->
     <section id="inicio" class="page page-dashboard" aria-label="Panel principal">
       <div class="page-head">
@@ -199,4 +203,13 @@
       </div>
     </section>
   </main>
+
+  <div class="cosa añadir">
+    <h1 class="page-head">Panel Añadir</h1>
+    <p class="subtitle">Aquí puedes visualizar los indicadores propuestos y añadidos por tu equipo de trabajo.</p>
+
+    
+
+
+  </div>
 </body>

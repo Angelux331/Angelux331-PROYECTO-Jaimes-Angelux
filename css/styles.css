@@ -163,6 +163,74 @@ body{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;margin:0;padding:0;
   margin:10px auto 25px;
   max-width:1400px;
 }
+
+.mainnormal, .añadir {
+  display: none;
+}
+
+.botones label {
+  padding: 10px 16px;
+  cursor: pointer;
+  border-radius: 6px;
+  margin-right: 8px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.2s ease;
+}
+
+input[type="radio"] {
+  display: none;
+}
+.botones label:hover {
+  background: #e8ebec;
+
+}
+.btnnav:hover {
+  background: #e8ebec;
+
+}
+
+.btnnav {
+  padding: 10px 16px;
+  cursor: pointer;
+  border-radius: 6px;
+  margin-right: 8px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.2s ease;
+}
+
+.btnnav1:hover {
+  background: #e8ebec;
+}
+
+.btnnav1 {
+  border-radius: 6px;
+  padding: 3px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+#v1:checked ~ .mainnormal{
+  display: block;
+}
+
+#añador:checked ~ .añadir {
+  display: block;
+}
+
+#eliminar:checked ~ .eliminar {
+  display: block;
+}
+
+#reportar:checked ~ .reportar {
+  display: block;
+}
+
 .page-title{
 
   margin:0;
