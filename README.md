@@ -100,6 +100,9 @@ El diseño es **responsivo y accesible**, con etiquetas ARIA y roles para mejora
 
 ---
 
+## Figma
+[Figma](https://www.figma.com/design/2Zi2CH2EANIrKoUyRziCj7/Untitled?node-id=0-1&t=18tzOTYrac8b5Lwp-1)
+
 ## Licencia
 
 Este proyecto es **libre para uso educativo y de maqueta**. No se proporciona licencia comercial.
