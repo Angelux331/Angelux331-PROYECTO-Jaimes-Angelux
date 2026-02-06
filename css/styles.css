@@ -24,6 +24,8 @@ body{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;margin:0;padding:0;
   display:flex;align-items:center;justify-content:center;
   animation:fadeOutSplash 1s ease-in-out 2.5s forwards;
   pointer-events:none;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+              url('../media/pexels-pixabay-159400.png') no-repeat center/cover;
 }
 .splash-logo{width:120px;animation:pulseLogo 2s infinite}
 
