@@ -15,14 +15,13 @@
   <input type="radio" name="vista" id="reportar" hidden>
 
   <header>
-
     <nav class="top-nav botones" aria-label="Navegación principal">
 
       <div class="nav-group" aria-label="Acciones">
 
         <label for="añador" class="nav-item" style="cursor:pointer">
           <img src="/assets/Group 3.svg" class="nav-icon" alt="" aria-hidden="true">
-            <span>Añadir</span>
+          <span>Añadir</span>
         </label>
 
         <a href="#refrescar" class="nav-item btnnav" style="cursor:pointer">
@@ -37,7 +36,7 @@
       </div>
 
       <div class="logo-center" aria-label="Inicio">
-        <label for="v1" class="nav-item" style="cursor:pointer" style="gap:0;">
+        <label for="v1" class="nav-item" style="cursor:pointer">
           <img src="assets/kario sin kairo.svg" class="nav-icon" alt="">
         </label>
       </div>
@@ -63,7 +62,7 @@
           </a>
           <div>
             <a href="pages/profile.html" class="avatar-small">
-              <img src="assets/pp.png" class="avatar-small" alt="Foto de perfil" >
+              <img src="assets/pp.png" class="avatar-small" alt="Foto de perfil">
             </a>
           </div>
         </div>
@@ -71,8 +70,8 @@
     </nav>
   </header>
 
+  <!-- VISTA PRINCIPAL -->
   <main class="main-container app-shell page mainnormal" tabindex="-1">
-    <!-- INICIO -->
     <section id="inicio" class="page page-dashboard" aria-label="Panel principal">
       <div class="page-head">
         <div>
@@ -199,28 +198,107 @@
         
       </div>
       <div class="page-actions">
-        <a class="btn-orange btn-inline" href="/pages/add.html">Añadir Elementos</a>
+        <label for="añador" class="btn-orange btn-inline" style="cursor:pointer">Añadir Elementos</label>
       </div>
     </section>
   </main>
 
+  <!-- VISTA AÑADIR -->
   <div class="main-container app-shell page añadir" tabindex="-1">
-    <section id="inicio" class="page page-dashboard" aria-label="Panel principal">
+    <section class="page page-dashboard" aria-label="Añadir elemento">
       <div class="page-head">
         <div>
-          <h1 class="page-title">Añadir Nuevo Elemento</h1>
-          <p class="subtitle">añadir</p>
+          <h1 class="page-title">Añadir Nuevo Indicador</h1>
+          <p class="subtitle">Complete el formulario para registrar un nuevo indicador en el sistema.</p>
         </div>
+      </div>
+
+      <div class="card-panel" style="max-width:900px; margin:0 auto;">
+        <form class="form-mock">
+          <div class="field-mock">
+            <label>Nombre del Indicador</label>
+            <input type="text" class="input-mock" placeholder="Ej: Ventas Trimestrales">
+          </div>
+
+          <div class="field-mock">
+            <label>Descripción</label>
+            <textarea class="input-mock input-mock-lg" placeholder="Describe brevemente el propósito del indicador..."></textarea>
+          </div>
+
+          <div class="two-cols">
+            <div class="field-mock">
+              <label>Categoría</label>
+              <select class="input-mock">
+                <option>Seleccionar...</option>
+                <option>Baja</option>
+                <option>Media</option>
+                <option>Alta</option>
+              </select>
+            </div>
+
+            <div class="field-mock">
+              <label>Área</label>
+              <select class="input-mock">
+                <option>Seleccionar...</option>
+                <option>Marketing</option>
+                <option>Diseño</option>
+                <option>Developers</option>
+                <option>Gerencia</option>
+                <option>Producción</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="two-cols">
+            <div class="field-mock">
+              <label>Fecha de Inicio</label>
+              <input type="date" class="input-mock">
+            </div>
+
+            <div class="field-mock">
+              <label>Fecha de Terminación</label>
+              <input type="date" class="input-mock">
+            </div>
+          </div>
+
+          <div class="two-cols">
+            <div class="field-mock">
+              <label>Fórmula</label>
+              <input type="text" class="input-mock" placeholder="Ej: Met.Ágil">
+            </div>
+
+            <div class="field-mock">
+              <label>Frecuencia</label>
+              <input type="text" class="input-mock" placeholder="Ej: 1/4">
+            </div>
+          </div>
+
+          <div class="field-mock">
+            <label>Porcentaje de Cumplimiento Inicial</label>
+            <input type="number" class="input-mock" placeholder="0-100" min="0" max="100">
+          </div>
+
+          <div class="page-actions" style="margin-top:25px;">
+            <button type="button" class="btn-orange btn-inline">Guardar Indicador</button>
+            <label for="v1" class="btn-gray-pill" style="cursor:pointer; margin-left:10px;">Cancelar</label>
+          </div>
+        </form>
       </div>
     </section>
   </div>
+
+  <!-- VISTA ELIMINAR -->
   <div class="main-container app-shell page eliminar" tabindex="-1">
-    <section id="inicio" class="page page-dashboard" aria-label="Panel principal">
+    <section class="page page-dashboard" aria-label="Eliminar elementos">
       <div class="page-head">
         <div>
-          <h1 class="page-title">Panel de Indicadores</h1>
-          <p class="subtitle">Aquí puedes visualizar los indicadores propuestos y añadidos por tu equipo de trabajo.</p>
+          <h1 class="page-title">Eliminar Indicadores</h1>
+          <p class="subtitle">Seleccione los indicadores que desea eliminar del sistema haciendo clic en ❌.</p>
         </div>
+      </div>
+
+      <div class="alert-danger" style="max-width:1400px; margin:0 auto 25px;">
+        <strong>Advertencia:</strong> Esta acción es permanente y no se puede deshacer. Los datos eliminados no podrán ser recuperados.
       </div>
 
       <div class="grid-wrap" role="region" aria-label="Tabla de indicadores">
@@ -234,7 +312,7 @@
           <span role="columnheader" class="col-center">Frecuencia</span>
           <span role="columnheader" class="col-center">Cumplimiento</span>
           <span role="columnheader" class="col-center">Área</span>
-          <span role="columnheader" aria-label="Acciones"></span>
+          <span role="columnheader" class="col-center" aria-label="Eliminar"></span>
         </div>
 
         <div class="grid-row" role="row">
@@ -251,7 +329,7 @@
             </div>
           </div>
           <span role="cell" class="col-center">Marketing</span>
-          <span role="cell" class="row-menu" aria-label="Más opciones">❌</span>
+          <span role="cell" class="row-menu" style="cursor:pointer" aria-label="Eliminar">❌</span>
         </div>
 
         <div class="grid-row" role="row">
@@ -268,7 +346,7 @@
             </div>
           </div>
           <span role="cell" class="col-center">Diseño</span>
-          <span role="cell" class="row-menu" aria-label="Más opciones">❌</span>
+          <span role="cell" class="row-menu" style="cursor:pointer" aria-label="Eliminar">❌</span>
         </div>
 
         <div class="grid-row" role="row">
@@ -285,7 +363,7 @@
             </div>
           </div>
           <span role="cell" class="col-center">Developers</span>
-          <span role="cell" class="row-menu" aria-label="Más opciones">❌</span>
+          <span role="cell" class="row-menu" style="cursor:pointer" aria-label="Eliminar">❌</span>
         </div>
 
         <div class="grid-row" role="row">
@@ -302,7 +380,7 @@
             </div>
           </div>
           <span role="cell" class="col-center">Gerencia</span>
-          <span role="cell" class="row-menu" aria-label="Más opciones">❌</span>
+          <span role="cell" class="row-menu" style="cursor:pointer" aria-label="Eliminar">❌</span>
         </div>
 
         <div class="grid-row" role="row">
@@ -319,7 +397,7 @@
             </div>
           </div>
           <span role="cell" class="col-center">Marketing</span>
-          <span role="cell" class="row-menu" aria-label="Más opciones">❌</span>
+          <span role="cell" class="row-menu" style="cursor:pointer" aria-label="Eliminar">❌</span>
         </div>
 
         <div class="grid-row" role="row">
@@ -336,20 +414,92 @@
             </div>
           </div>
           <span role="cell" class="col-center">Producción</span>
-          <span role="cell" class="row-menu" aria-label="Más opciones">❌</span>
+          <span role="cell" class="row-menu" style="cursor:pointer" aria-label="Eliminar">❌</span>
         </div>
         
       </div>
-    </section>
-  </div>
-  <div class="main-container app-shell page reportar" tabindex="-1">
-    <section id="inicio" class="page page-dashboard" aria-label="Panel principal">
-      <div class="page-head">
-        <div>
-          <h1 class="page-title">Añadir Nuevo Elemento</h1>
-          <p class="subtitle">añadir</p>
-        </div>
+
+      <div class="page-actions" style="margin-top:30px;">
+        <label for="v1" class="btn-gray-pill" style="cursor:pointer;">← Volver al Panel</label>
       </div>
     </section>
   </div>
+
+  <!-- VISTA REPORTAR -->
+  <div class="main-container app-shell page reportar" tabindex="-1">
+    <section class="page page-dashboard" aria-label="Reportar problema">
+      <div class="page-head">
+        <div>
+          <h1 class="page-title">Reportar un Problema</h1>
+          <p class="subtitle">Ayúdanos a mejorar reportando errores, bugs o sugerencias del sistema.</p>
+        </div>
+      </div>
+
+      <div class="card-panel" style="max-width:900px; margin:0 auto;">
+        <form class="form-mock">
+          <div class="field-mock">
+            <label>Tipo de Reporte</label>
+            <select class="input-mock">
+              <option>Seleccionar tipo...</option>
+              <option>Error / Bug</option>
+              <option>Sugerencia</option>
+              <option>Problema de Rendimiento</option>
+              <option>Problema Visual</option>
+              <option>Otro</option>
+            </select>
+          </div>
+
+          <div class="field-mock">
+            <label>Título del Problema</label>
+            <input type="text" class="input-mock" placeholder="Resumen breve del problema">
+          </div>
+
+          <div class="field-mock">
+            <label>Descripción Detallada</label>
+            <textarea class="input-mock" style="min-height:120px;" placeholder="Describe el problema con el mayor detalle posible. ¿Qué esperabas que sucediera? ¿Qué sucedió realmente?"></textarea>
+          </div>
+
+          <div class="field-mock">
+            <label>Pasos para Reproducir el Error</label>
+            <textarea class="input-mock" style="min-height:90px;" placeholder="1. Ir a...&#10;2. Hacer clic en...&#10;3. Ver el error..."></textarea>
+          </div>
+
+          <div class="two-cols">
+            <div class="field-mock">
+              <label>Prioridad</label>
+              <select class="input-mock">
+                <option>Baja</option>
+                <option selected>Media</option>
+                <option>Alta</option>
+                <option>Crítica</option>
+              </select>
+            </div>
+
+            <div class="field-mock">
+              <label>Navegador Utilizado</label>
+              <input type="text" class="input-mock" placeholder="Ej: Chrome, Firefox, Safari">
+            </div>
+          </div>
+
+          <div class="field-mock">
+            <label>Tu Email</label>
+            <input type="email" class="input-mock" placeholder="correo@ejemplo.com">
+          </div>
+
+          <div class="divider"></div>
+
+          <div class="status-row">
+            <span class="status-text">Tu reporte será revisado por el equipo técnico</span>
+          </div>
+
+          <div class="page-actions" style="margin-top:25px;">
+            <button type="button" class="btn-orange btn-inline">Enviar Reporte</button>
+            <label for="v1" class="btn-gray-pill" style="cursor:pointer; margin-left:10px;">Cancelar</label>
+          </div>
+        </form>
+      </div>
+    </section>
+  </div>
+
 </body>
+</html>
